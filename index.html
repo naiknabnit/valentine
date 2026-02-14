@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Valentine</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Valentine</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="startScreen">
-    <button id="startBtn">Click Here ❤️</button>
+    <div class="fadeIn">
+        <h2>Something special for you ❤️</h2>
+        <button id="startBtn">Open</button>
+    </div>
 </div>
 
 <div id="mainContent" class="hidden">
-    <h1>Will you be my valentine muchiii? 💖</h1>
-    <button id="yesBtn">YES 💘</button>
-    <button id="noBtn">NO 😢</button>
+    <h1 id="typedText"></h1>
+
+    <div class="buttons">
+        <button id="yesBtn">YES 💘</button>
+        <button id="noBtn">NO 😢</button>
+    </div>
 
     <a id="shareBtn" 
-       href="https://wa.me/?text=Will%20you%20be%20my%20valentine%20muchiii%3F%20❤️" 
+       href="https://wa.me/?text=Will%20you%20be%20my%20valentine%20muchiii%3F%20❤️"
        target="_blank">
-       Share on WhatsApp
+       Share on WhatsApp 💌
     </a>
 </div>
 
-<div class="petals"></div>
-<div class="hearts"></div>
+<div id="fireworks"></div>
 
 <script src="script.js"></script>
 </body>

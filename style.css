@@ -1,1 +1,71 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff4d6d, #ff8fa3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#startBtn {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startBtn:hover {
+    transform: scale(1.1);
+}
+
+#mainContent h1 {
+    color: white;
+    font-size: 30px;
+}
+
+#yesBtn, #noBtn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#yesBtn {
+    background: #00ff88;
+}
+
+#noBtn {
+    background: #ff0033;
+    color: white;
+}
+
+#shareBtn {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: underline;
+}
+
+.petal, .heart {
+    position: absolute;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh); }
+    100% { transform: translateY(110vh); }
+}
 

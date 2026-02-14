@@ -1,12 +1,13 @@
 body {
     margin: 0;
     overflow: hidden;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #ff4d6d, #ff8fa3);
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #ff4d6d, #8b0000);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    color: white;
     text-align: center;
 }
 
@@ -14,13 +15,18 @@ body {
     display: none;
 }
 
+#startScreen {
+    position: absolute;
+}
+
 #startBtn {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 15px 40px;
+    font-size: 18px;
     border: none;
     border-radius: 30px;
-    background: white;
     cursor: pointer;
+    background: white;
+    color: #ff4d6d;
     transition: 0.3s;
 }
 
@@ -28,27 +34,37 @@ body {
     transform: scale(1.1);
 }
 
-#mainContent h1 {
-    color: white;
-    font-size: 30px;
+h1 {
+    font-size: 32px;
+    min-height: 50px;
 }
 
-#yesBtn, #noBtn {
-    padding: 10px 20px;
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
     margin: 10px;
     border: none;
-    border-radius: 20px;
-    cursor: pointer;
+    border-radius: 25px;
     font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #yesBtn {
     background: #00ff88;
 }
 
+#yesBtn:hover {
+    transform: scale(1.1);
+}
+
 #noBtn {
     background: #ff0033;
     color: white;
+    position: relative;
 }
 
 #shareBtn {
@@ -58,14 +74,29 @@ body {
     text-decoration: underline;
 }
 
+/* Falling petals */
 .petal, .heart {
     position: absolute;
-    font-size: 20px;
+    font-size: 22px;
     animation: fall linear infinite;
 }
 
 @keyframes fall {
-    0% { transform: translateY(-10vh); }
-    100% { transform: translateY(110vh); }
+    0% { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
 }
 
+/* Fireworks */
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(15); opacity: 0; }
+}
